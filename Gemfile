@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -32,6 +30,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+gem 'coffee-rails'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -51,6 +51,7 @@ group :development, :test do
   gem "pry-rails"
   gem "web_git", github: "firstdraft/web_git"
   gem "awesome_print"
+  gem 'sqlite3', '~> 1.3', '< 1.4'
   gem "console_ip_whitelist", github: "firstdraft/console_ip_whitelist"
 end
 
@@ -60,7 +61,6 @@ group :development do
   gem "draft_generators", github: "firstdraft/draft_generators"
   gem "letter_opener"
   gem "meta_request"
-  gem "draft_log", github: "firstdraft/draft_log"
 end
 
 group :test do
